@@ -1,0 +1,29 @@
+{
+  "name": "portifolio-pessoal",
+  "version": "1.0.0",
+  "description": "Descrição pessoal do autor sobre suas abilidades e projetos ja realizados",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedroh-dev255/portifolio-pessoal.git"
+  },
+  "keywords": [
+    "portifolio"
+  ],
+  "author": "pedroh-dev255",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pedroh-dev255/portifolio-pessoal/issues"
+  },
+  "homepage": "https://github.com/pedroh-dev255/portifolio-pessoal#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "particles.js": "^2.0.0"
+  }
+}
