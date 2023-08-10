@@ -4,6 +4,7 @@
   "description": "Descrição pessoal do autor sobre suas abilidades e projetos ja realizados",
   "main": "app.js",
   "scripts": {
+    "start":"nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

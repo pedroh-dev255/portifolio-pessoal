@@ -31,14 +31,58 @@
         p {
             font-size: 1.5em;
         }
+
+        /* Estilos para o botão de alternância de idioma */
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .toggle-button {
+            background-color: transparent;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        /* Estilos para o conteúdo do site */
+        #content.english {
+            /* Estilos para a versão em inglês */
+            color: #ffffff;
+            /* ... outros estilos ... */
+        }
+        .content-english {
+            display: none; /* Conteúdo em inglês inicialmente oculto */
+        }
+
+        /* Estilos para o conteúdo do site em inglês */
+        #content .content-english {
+            color: #ffffff;
+            /* ... outros estilos ... */
+        }
     </style>
 </head>
 <body>
     <div id="particles-js"></div>
     <div id="content">
-        <h1>Bem vindo ao Meu Portifolio</h1>
-        
+        <div class="content-portuguese">
+            <h1>Bem-vindo ao Meu Portifolio</h1>
+        </div>
+        <div class="content-english" style="display: none;">
+            <h1>Welcome to My Portifolio</h1>
+        </div>
     </div>
+    
+    
+    <div id="language-toggle" class="language-toggle">
+        <button id="toggle-button" class="toggle-button" onclick="toggleLanguage()">
+            Português / English
+        </button>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
         particlesJS("particles-js", {
@@ -151,6 +195,24 @@
             },
             retina_detect: true
         });
+
+        function toggleLanguage() {
+            var contentElement = document.getElementById('content');
+            var toggleButton = document.getElementById('toggle-button');
+            var portugueseContent = contentElement.querySelector('.content-portuguese');
+            var englishContent = contentElement.querySelector('.content-english');
+
+            if (portugueseContent.style.display === 'none') {
+                portugueseContent.style.display = 'block';
+                englishContent.style.display = 'none';
+                toggleButton.textContent = 'Português / English';
+            } else {
+                portugueseContent.style.display = 'none';
+                englishContent.style.display = 'block';
+                toggleButton.textContent = 'English / Português';
+            }
+        }
+
     </script>
 </body>
 </html>
